@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Evangelization Network</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- TOP BAR -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      
+      <!-- BRAND / LOGO SECTION -->
+      <a href="#" class="flex items-center h-12">
+        <img src="logo.png" alt="Digital Evangelization Network" class="h-10 w-auto object-contain">
+      </a>
+
+      <!-- RIGHT BUTTONS -->
+      <div class="flex items-center space-x-4">
+        <a href="#" class="bg-denGreen hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-2 shadow-sm transition">
+          🛒 Order Books
+        </a>
+        <a href="#" class="text-gray-500 hover:text-gray-800 font-medium text-sm">Admin</a>
+      </div>
+
+    </div>
+
+    <!-- MAIN NAV -->
+    <nav class="bg-denBlue text-white">
+      <div class="max-w-7xl mx-auto px-4 flex space-x-8 py-3 text-sm font-medium overflow-x-auto">
+        <a href="#" class="border-b-2 border-white pb-1 font-semibold">Home</a>
+        <a href="#" class="hover:text-blue-200 transition">About DEN</a>
+        <a href="#" class="hover:text-blue-200 transition">Books</a>
+        <a href="#" class="hover:text-blue-200 transition">Inspiration</a>
+        <a href="#" class="hover:text-blue-200 transition">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SLIDER SECTION -->
+  <section class="relative bg-black text-white overflow-hidden min-h-[420px] flex items-center">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80');"></div>
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-12 w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      
+      <!-- Slide Book Cover Image Container -->
+      <div class="md:col-span-4 flex justify-center">
+        <div class="w-64 h-88 rounded-xl overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 border-2 border-white/20">
+          <img id="slide-cover-img" src="book1.png" alt="Book Cover" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Slide Text Content -->
+      <div class="md:col-span-8 text-left space-y-4">
+        <span id="slide-badge" class="inline-block bg-denGreen text-white text-xs font-bold px-3 py-1 rounded-md tracking-wide uppercase">
+          Virtue Series – Grade 1
+        </span>
+        <h1 id="slide-title" class="text-4xl sm:text-5xl font-black text-white leading-tight">
+          Good Manners, Matters
+        </h1>
+        <p id="slide-desc" class="text-gray-300 text-lg max-w-2xl">
+          Inspiring good manners in everyday life — foundational virtues for forming good character.
+        </p>
+        
+        <div class="pt-2 flex items-center space-x-6">
+          <span id="slide-price" class="text-3xl font-extrabold text-denGreen">₱650</span>
+          <button class="bg-white hover:bg-gray-100 text-denBlue font-bold px-6 py-3 rounded-lg shadow-lg transition">
+            Buy Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Nav Buttons -->
+    <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full transition">❮</button>
+    <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full transition">❯</button>
+
+    <!-- Carousel Indicator Dots -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2" id="dots-container"></div>
+  </section>
+
+  <!-- MAIN BODY LAYOUT -->
+  <main class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- LEFT COLUMN -->
+    <div class="lg:col-span-8 space-y-12">
+      
+      <!-- LATEST RELEASES -->
+      <section>
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-bold text-gray-900 border-l-4 border-denGreen pl-3">Latest Releases</h2>
+          <a href="#" class="text-sm font-semibold text-denBlue hover:underline">View All →</a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          
+          <!-- Book 1 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <span class="text-[10px] font-bold bg-green-500 text-white px-2 py-0.5 rounded self-start mb-2">Grade 1</span>
+            <div class="rounded-lg h-44 overflow-hidden mb-3 border border-gray-100">
+              <img src="book1.png" alt="Good Manners, Matters" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-gray-800 line-clamp-1">Good Manners, Matters</h3>
+              <p class="text-xs font-bold text-denGreen mt-1">₱250</p>
+              <button class="w-full mt-2 bg-denBlue text-white text-xs font-semibold py-1.5 rounded-md hover:bg-blue-700 transition">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Book 2 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <span class="text-[10px] font-bold bg-purple-600 text-white px-2 py-0.5 rounded self-start mb-2">Grade 2</span>
+            <div class="rounded-lg h-44 overflow-hidden mb-3 border border-gray-100">
+              <img src="book2.png" alt="Faithful Footsteps" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-gray-800 line-clamp-1">Faithful Footsteps</h3>
+              <p class="text-xs font-bold text-denGreen mt-1">₱250</p>
+              <button class="w-full mt-2 bg-denBlue text-white text-xs font-semibold py-1.5 rounded-md hover:bg-blue-700 transition">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Book 3 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <span class="text-[10px] font-bold bg-lime-600 text-white px-2 py-0.5 rounded self-start mb-2">Grade 3</span>
+            <div class="rounded-lg h-44 overflow-hidden mb-3 border border-gray-100">
+              <img src="book3.png" alt="Leading with Integrity" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-gray-800 line-clamp-1">Leading with Integrity</h3>
+              <p class="text-xs font-bold text-denGreen mt-1">₱250</p>
+              <button class="w-full mt-2 bg-denBlue text-white text-xs font-semibold py-1.5 rounded-md hover:bg-blue-700 transition">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Book 4 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <span class="text-[10px] font-bold bg-orange-500 text-white px-2 py-0.5 rounded self-start mb-2">Grade 4</span>
+            <div class="rounded-lg h-44 overflow-hidden mb-3 border border-gray-100">
+              <img src="book4.png" alt="Good with Compassion" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-gray-800 line-clamp-1">Good with Compassion</h3>
+              <p class="text-xs font-bold text-denGreen mt-1">₱250</p>
+              <button class="w-full mt-2 bg-denBlue text-white text-xs font-semibold py-1.5 rounded-md hover:bg-blue-700 transition">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Book 5 -->
+          <div class="bg-white rounded-xl border border-gray-200 p-3 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <span class="text-[10px] font-bold bg-pink-500 text-white px-2 py-0.5 rounded self-start mb-2">Grade 5</span>
+            <div class="rounded-lg h-44 overflow-hidden mb-3 border border-gray-100">
+              <img src="book5.png" alt="Happy Manners" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-gray-800 line-clamp-1">Happy Manners</h3>
+              <p class="text-xs font-bold text-denGreen mt-1">₱250</p>
+              <button class="w-full mt-2 bg-denBlue text-white text-xs font-semibold py-1.5 rounded-md hover:bg-blue-700 transition">Buy Now</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FEATURED BOOKS -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-bold text-gray-900 border-l-4 border-denGreen pl-3 mb-4">Featured Books</h2>
+
+        <!-- Featured Book 1 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img src="book1.png" alt="Good Manners, Matters" class="w-16 h-20 object-cover rounded-lg border border-gray-200">
+            <div>
+              <span class="text-xs font-bold text-denGreen uppercase">Virtue Series • Grade 1</span>
+              <h3 class="text-base font-bold text-gray-900">Good Manners, Matters</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Inspiring good manners in everyday life — foundational virtues for forming good character.</p>
+            </div>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2">
+            <span class="text-lg font-bold text-denBlue">₱250</span>
+            <button class="bg-denGreen hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition">Order</button>
+          </div>
+        </div>
+
+        <!-- Featured Book 2 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img src="book2.png" alt="Faithful Footsteps" class="w-16 h-20 object-cover rounded-lg border border-gray-200">
+            <div>
+              <span class="text-xs font-bold text-purple-600 uppercase">Virtue Series • Grade 2</span>
+              <h3 class="text-base font-bold text-gray-900">Faithful Footsteps</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Treasuring kids celebration in everyday life — encouraging faithfulness and integrity.</p>
+            </div>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2">
+            <span class="text-lg font-bold text-denBlue">₱250</span>
+            <button class="bg-denGreen hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition">Order</button>
+          </div>
+        </div>
+
+        <!-- Featured Book 3 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img src="book3.png" alt="Leading with Integrity" class="w-16 h-20 object-cover rounded-lg border border-gray-200">
+            <div>
+              <span class="text-xs font-bold text-lime-600 uppercase">Virtue Series • Grade 3</span>
+              <h3 class="text-base font-bold text-gray-900">Leading with Integrity</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Inspiring good manners in everyday life through leadership and honest living.</p>
+            </div>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2">
+            <span class="text-lg font-bold text-denBlue">₱250</span>
+            <button class="bg-denGreen hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition">Order</button>
+          </div>
+        </div>
+
+        <!-- Featured Book 4 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img src="book4.png" alt="Good with Compassion" class="w-16 h-20 object-cover rounded-lg border border-gray-200">
+            <div>
+              <span class="text-xs font-bold text-orange-500 uppercase">Virtue Series • Grade 4</span>
+              <h3 class="text-base font-bold text-gray-900">Good with Compassion</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Empowering good manners through compassion, care, and love for others.</p>
+            </div>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2">
+            <span class="text-lg font-bold text-denBlue">₱250</span>
+            <button class="bg-denGreen hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition">Order</button>
+          </div>
+        </div>
+
+        <!-- Featured Book 5 -->
+        <div class="bg-white border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-center gap-4">
+            <img src="book5.png" alt="Happy Manners" class="w-16 h-20 object-cover rounded-lg border border-gray-200">
+            <div>
+              <span class="text-xs font-bold text-pink-500 uppercase">Virtue Series • Grade 5</span>
+              <h3 class="text-base font-bold text-gray-900">Happy Manners</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Visioning good manners in everyday life — finding joy in living virtuously.</p>
+            </div>
+          </div>
+          <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-2">
+            <span class="text-lg font-bold text-denBlue">₱250</span>
+            <button class="bg-denGreen hover:bg-green-700 text-white text-xs font-bold px-4 py-2 rounded-lg transition">Order</button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ABOUT SECTION CARD -->
+      <section class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <h2 class="text-lg font-bold text-denBlue border-l-4 border-denGreen pl-3 mb-3">About Digital Evangelization Network</h2>
+        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+          Digital Evangelization Network (DEN) is committed to spreading the Gospel and forming young hearts through faith-based educational materials. Our <strong>Virtue Series Books</strong> help children grow in character — <em>Makabansa, Maka-Diyos, Makatao, at Makakalikasan.</em>
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs font-medium text-denBlue">
+          <span class="bg-blue-50 px-3 py-1 rounded-full border border-blue-100">✨ Form In Faith</span>
+          <span class="bg-blue-50 px-3 py-1 rounded-full border border-blue-100">💙 Evangelize with Love</span>
+          <span class="bg-blue-50 px-3 py-1 rounded-full border border-blue-100">👨‍👩‍👧 Disciple with Purpose</span>
+          <span class="bg-blue-50 px-3 py-1 rounded-full border border-blue-100">🌐 Mission to the World</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <aside class="lg:col-span-4 space-y-6">
+      
+      <div class="bg-denBlue text-white rounded-2xl p-6 text-center shadow-md">
+        <div class="text-3xl mb-2">📖</div>
+        <h3 class="font-bold text-lg">Order Your Books</h3>
+        <p class="text-xs text-blue-100 mt-1 mb-4">Get the complete Virtue Series for Grades 1–5. Forming hearts, strengthening souls.</p>
+        <button class="w-full bg-denGreen hover:bg-green-700 text-white font-bold py-2.5 rounded-lg text-sm transition shadow">
+          Order Now
+        </button>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+        <h4 class="text-xs font-bold text-denGreen flex items-center gap-1 uppercase tracking-wide mb-2">
+          <span>⭐</span> Daily Inspiration
+        </h4>
+        <blockquote class="text-xs italic text-gray-700 border-l-2 border-gray-300 pl-3 my-2">
+          "I can do all things through Christ who strengthens me."
+        </blockquote>
+        <p class="text-right text-[11px] font-bold text-gray-500">— Philippians 4:13</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm space-y-2 text-xs">
+        <h4 class="font-bold text-gray-900 border-l-2 border-denGreen pl-2 mb-2">Contact Us</h4>
+        <p class="text-gray-600">📞 09335242194</p>
+        <p class="text-gray-600">✉️ devnetgp@gmail.com</p>
+        <p class="text-gray-600">🌐 Digital Evangelization Network</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+        <h4 class="font-bold text-xs text-gray-900 border-l-2 border-denGreen pl-2 mb-3">By the Numbers</h4>
+        <div class="space-y-2 text-xs">
+          <div class="flex justify-between py-1 border-b border-gray-100">
+            <span class="text-gray-500">Book Titles</span>
+            <span class="font-bold text-denBlue">5+</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-gray-100">
+            <span class="text-gray-500">Lives Touched</span>
+            <span class="font-bold text-denBlue">1,000+</span>
+          </div>
+          <div class="flex justify-between py-1">
+            <span class="text-gray-500">Faith-Centered</span>
+            <span class="font-bold text-denBlue">100%</span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- WORDS OF WISDOM SECTION -->
+  <section class="bg-denDarkBlue text-white py-16 px-4">
+    <div class="max-w-7xl mx-auto text-center space-y-8">
+      <div>
+        <span class="inline-block bg-blue-900/60 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-blue-700/50 mb-2">
+          ⭐ Words of Wisdom ⭐
+        </span>
+        <h2 class="text-3xl font-extrabold text-white">Be Inspired by <span class="text-denGreen">God's Word</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div class="bg-denCardBlue p-6 rounded-2xl border border-blue-900/50 space-y-3">
+          <div class="text-purple-400 text-xl font-bold">✝️ "</div>
+          <p class="text-xs text-gray-300 leading-relaxed">"I can do all things through Christ who strengthens me."</p>
+          <p class="text-xs font-semibold text-denGreen text-right">— Philippians 4:13</p>
+        </div>
+
+        <div class="bg-denCardBlue p-6 rounded-2xl border border-blue-900/50 space-y-3">
+          <div class="text-yellow-400 text-xl font-bold">💛 "</div>
+          <p class="text-xs text-gray-300 leading-relaxed">"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."</p>
+          <p class="text-xs font-semibold text-denGreen text-right">— John 3:16</p>
+        </div>
+
+        <div class="bg-denCardBlue p-6 rounded-2xl border border-blue-900/50 space-y-3">
+          <div class="text-green-400 text-xl font-bold">🌿 "</div>
+          <p class="text-xs text-gray-300 leading-relaxed">"Trust in the Lord with all your heart and lean not on your own understanding."</p>
+          <p class="text-xs font-semibold text-denGreen text-right">— Proverbs 3:5</p>
+        </div>
+      </div>
+
+      <div class="pt-6">
+        <p class="text-xl font-bold text-gray-200">"Let's evangelize together."</p>
+        <div class="flex justify-center space-x-2 text-lg mt-2">
+          <span>✝️</span><span>🕊️</span><span>🙏</span><span>❤️</span><span>✨</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-denBlue text-white py-8 text-center text-xs space-y-3">
+    <div class="flex justify-center">
+      <img src="logo.png" alt="DEN Logo" class="h-12 w-auto object-contain bg-white p-1 rounded-lg">
+    </div>
+    <p>&copy; 2026 Digital Evangelization Network</p>
+    <p class="text-blue-200 italic">"Sharing Christ. Transforming Lives. Online. On mission. For Christ."</p>
+  </footer>
+
+  <!-- Custom JS File -->
+  <script src="index.js"></script>
+</body>
+</html>
